@@ -25,4 +25,5 @@ experiment_buddy.register(locals())
 learning_rate = jax.experimental.optimizers.inverse_time_decay(initial_lr, decay_steps, decay_factor, staircase=True)
 eval_every = math.ceil(num_epochs / 1000)
 
-tensorboard = experiment_buddy.deploy(use_remote=True, sweep_yaml="")
+tensorboard = experiment_buddy.deploy("viper", sweep_yaml="")  #,
+# remote_python="$HOME/rl-benchmarks/benchmarksVirtualenv37/bin/activate")
