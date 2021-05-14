@@ -25,4 +25,9 @@ experiment_buddy.register(locals())
 learning_rate = jax.experimental.optimizers.inverse_time_decay(initial_lr, decay_steps, decay_factor, staircase=True)
 eval_every = math.ceil(num_epochs / 1000)
 
-tensorboard = experiment_buddy.deploy(host="", sweep_yaml="")
+runner = {
+    'LOCAL_HOST': '',
+    'MILA_CLUSTER': 'mila'
+}
+
+tensorboard = experiment_buddy.deploy(host=runner['MILA_CLUSTER'], sweep_yaml="")
