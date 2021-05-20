@@ -1,3 +1,3 @@
 jax
 jaxlib
-git+https://github.com/ministry-of-silly-code/experiment_buddy.git@feature/flow_test#egg=experiment_buddy
+git+https://github.com/ministry-of-silly-code/experiment_buddy.git@feature/common_sh#egg=experiment_buddy
