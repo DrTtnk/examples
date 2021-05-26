@@ -1,3 +1,3 @@
 jax
 jaxlib
-git+https://github.com/ministry-of-silly-code/experiment_buddy.git#egg=experiment_buddy
+git+https://github.com/ministry-of-silly-code/experiment_buddy.git@feature/time_logger#egg=experiment_buddy
