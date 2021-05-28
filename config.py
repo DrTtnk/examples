@@ -33,4 +33,4 @@ host_map = {
     'local': ''
 }
 
-tensorboard = experiment_buddy.deploy(host=host_map[HOST], sweep_yaml="")
+# tensorboard = experiment_buddy.deploy(host=host_map[HOST], sweep_yaml="")

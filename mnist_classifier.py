@@ -20,6 +20,7 @@ optimization.
 """
 
 import itertools
+import sys
 import time
 
 import jax.numpy as jnp
@@ -54,6 +55,8 @@ init_random_params, predict = stax.serial(
 if __name__ == "__main__":
 
     tensorboard = config.tensorboard
+
+    sys.exit()
 
     rng = random.PRNGKey(0)
 
