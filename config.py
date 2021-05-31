@@ -6,19 +6,20 @@ import jax.experimental.optimizers
 
 import experiment_buddy
 
-initial_lr = .0001
+ma_man = experiment_buddy.MaMan()
 
-decay_steps = 500000
-num_hidden = 1024
-decay_factor = .5
+with ma_man.parameters_block():
+    initial_lr = .0001
 
-batch_size = 128
-momentum_mass = 0.99
-weight_norm = 0.00
+    decay_steps = 500000
+    num_hidden = 1024
+    decay_factor = .5
 
-num_epochs = 1000
+    batch_size = 128
+    momentum_mass = 0.99
+    weight_norm = 0.00
 
-experiment_buddy.register(locals())
+    num_epochs = 1
 
 ################################################################
 # Derivative parameters
@@ -33,4 +34,4 @@ host_map = {
     'local': ''
 }
 
-tensorboard = experiment_buddy.deploy(host=host_map[HOST], sweep_yaml="")
+tensorboard = ma_man.deploy(host=host_map[HOST], sweep_yaml="")
